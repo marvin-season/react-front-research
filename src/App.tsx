@@ -1,12 +1,12 @@
-import {Md} from "./components/md";
-import {MyDocViewer} from "./components/doc/MyDocViewer.tsx";
 // import Sample from "./components/pdf";
+
+import {ExcelViewer} from "./components/excel/ExcelViewer.tsx";
 
 function App() {
 
     return (
         <>
-            <MyDocViewer/>
+            <ExcelViewer/>
         </>
     )
 }
