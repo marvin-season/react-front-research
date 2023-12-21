@@ -1,13 +1,12 @@
 // import Sample from "./components/pdf";
 
-import {ExcelViewer} from "./components/excel/ExcelViewer.tsx";
+import {ExcelPreview} from "./components/excel/ExcelPreview.tsx";
+import Sample from "./components/pdf";
 
 function App() {
 
     return (
-        <>
-            <ExcelViewer/>
-        </>
+        <Sample/>
     )
 }
 
