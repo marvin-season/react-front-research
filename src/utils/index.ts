@@ -7,27 +7,30 @@ export const handleScroll = (selector: string) => document.querySelector(selecto
 export const matchAndGetPosition = (content: string, targetStr: string) => {
     console.log(targetStr)
     console.log(content)
+
+    const result = {
+        startIndex: -1,
+        length: -1,
+        consumedContent: '',
+        remainingContent: ''
+    }
     const startIndex = content.indexOf(targetStr);
+
     if (startIndex == -1) {
         let {startIndex, length, substring} = findCommonStrByLonger(content, targetStr);
-        console.log(startIndex, length, substring)
         if (startIndex != -1 && content.endsWith(substring)) {
-            console.log(targetStr.substring(substring.length - 1))
-            return {
-                startIndex,
-                length,
-                consumedContent: targetStr.substring(0, substring.length),
-                remainingContent: targetStr.substring(substring.length - 1)
-            };
+            result.startIndex = startIndex
+            result.length = length
+            result.consumedContent = targetStr.substring(0, substring.length)
+            result.remainingContent = targetStr.substring(substring.length - 1)
         }
+    } else {
+        result.startIndex = startIndex
+        result.length = targetStr.length
+        result.consumedContent = targetStr
     }
 
-    return {
-        startIndex,
-        length: targetStr.length,
-        consumedContent: undefined,
-        remainingContent: undefined
-    };
+    return result
 };
 
 /**
@@ -96,3 +99,12 @@ export const getIntersectionByIndex = (startIndex: number, endIndex: number, tar
     const length = targetEndIndex < endIndex ? targetEndIndex - targetStartIndex - startOffset : endIndex - targetStartIndex;
     return [startOffset, length];
 };
+
+export const inRange = (index: number, ranges: number[][]) => {
+    for (const range of ranges) {
+        if (index >= range[0] && index <= range[0] + range[1]) {
+            return true
+        }
+    }
+    return false
+}

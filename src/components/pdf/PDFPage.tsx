@@ -4,16 +4,16 @@ import React from "react";
 import {onHighLighted} from '../../types'
 
 const PDFPage: React.FC<{
-    keyword: string,
+    keywords: string[],
     pageWidth: number, onHighLighted?: onHighLighted,
     pageNumber: number,
 }> = ({
-          keyword,
+          keywords,
           pageWidth,
           pageNumber,
           onHighLighted
       }) => {
-    const {handleCustomTextRenderer, handleRenderTextLayerSuccess} = usePDFHighLight(keyword, pageNumber,onHighLighted);
+    const {handleCustomTextRenderer, handleRenderTextLayerSuccess} = usePDFHighLight(keywords, pageNumber,onHighLighted);
     return (
         <>
             <Page
