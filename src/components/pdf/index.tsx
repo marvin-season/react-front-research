@@ -1,21 +1,36 @@
-import {Document, Page, pdfjs} from 'react-pdf';
+import {Document, pdfjs} from 'react-pdf';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
+import PDFPage from "./PDFPage.tsx";
+import {handleScroll} from "../../utils";
+import {useState} from "react";
 
-const keyword = '。我们过去在做，现在仍然做的 代\n' +
-    '理分销的业务由于有非常高的运营指标，仍然也是资本市场非常喜欢的业务内容。如何在进\n' +
-    '销存、净利率、市占率等等领域里面 ，不断地提升我们的运营效率，也是提升我们企业价值\n' +
-    '很重要的方面。  \n' +
-    '第三是品牌。 品牌是一个非常综合的因素，有历史也有未来，因为它是对过去行为的评\n' +
-    '估，也是对未来行为的预估，是一种无形资产 ，价值也是在 不断变化的。为什么我们在合肥'
+const hlInfos = [
+    "Etiam fringilla hendrerit purus sed vestibulum. Morbi congue diam vitae justo pellentesque mollis.\n" +
+    "Aenean non sem tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur\n" +
+    "ridiculus mus. Pellentesque eget semper ligula, et luctus odio. Nam ac metus nec ex euismod varius\n" +
+    "ac a ligula. Curabitur vel scelerisque odio. In\n" +
+    "pellentesque massa sit amet tortor aliquam,",
+    "finibus nibh. Praesent\n" +
+    "interdum, ex eu luctus\n" +
+    "semper, dolor metus\n" +
+    "congue orci, in auctor\n" +
+    "neque erat vitae nibh.\n" +
+    "Donec pretium purus nec\n" +
+    "ante efficitur vulputate.\n" +
+    "Proin lacus nisl, blandit quis\n" +
+    "diam eget, imperdiet iaculis\n" +
+    "lectus. Aliquam commodo\n" +
+    "arcu est, sit amet aliquet\n" +
+    "odio sollicitudin vel.\n",
+    "Integer ullamcorper fringilla pulvinar."
+]
 
+const getHLText = (i: number) => {
+    // @ts-ignore
+    return hlInfos[i] ?? ''
+}
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdf.worker.js', import.meta.url).toString();
-// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-// pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-//     'pdfjs-dist/build/pdf.worker.min.js',
-//     import.meta.url,
-// ).toString();
-console.log(pdfjs.GlobalWorkerOptions.workerSrc)
 
 const options = {
     cMapUrl: '/cmaps/',
@@ -24,12 +39,47 @@ const options = {
 
 
 export default function Sample() {
+    const [currentPageIndex, setCurrentPageIndex] = useState(0);
+    const [totalPages, setTotalPages] = useState(0);
+
+
     return (
-        <Document file={'demo2.pdf'} options={options}>
-            <Page
-                pageNumber={1}
-                width={600}
-            />
-        </Document>
+        <>
+            <div>
+                {
+                    hlInfos.map((item, index) => <button onClick={() => {
+                        setCurrentPageIndex(index)
+                    }}>第{index + 1}页高亮位置
+                    </button>)
+                }
+            </div>
+
+            <div style={{height: '700px', overflow: 'auto'}}>
+
+                <Document file={'demo.pdf'} options={options} onLoadSuccess={({numPages}) => {
+                    setTotalPages(numPages);
+                }}>
+                    {
+                        Array(totalPages).fill(-1).map((item, index) => {
+
+                            return <div key={index}>
+                                <PDFPage
+                                    keyword={getHLText(index)}
+                                    pageWidth={800}
+                                    pageNumber={index + 1}
+                                    onHighLighted={(keyword, pageNumber) => {
+                                        if (currentPageIndex + 1 == pageNumber) {
+                                            console.log(`skip to #mark-highlight-pdf${pageNumber}`);
+                                            handleScroll(`#mark-highlight-pdf${pageNumber}`)
+                                        }
+                                    }}
+                                />
+                            </div>
+                        })
+                    }
+                </Document>
+            </div>
+        </>
+
     );
 }

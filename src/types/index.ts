@@ -1,0 +1,1 @@
+export type onHighLighted =  (keyword: string, pageNumber: number) => void
