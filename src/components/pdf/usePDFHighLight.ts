@@ -14,8 +14,7 @@ let initCurrentIndex = 0;
  */
 const initContextInfo = {
     content: "",
-    startIndex: 0,
-    endIndex: 0
+    ranges: [] as number[][]
 };
 
 
@@ -50,7 +49,6 @@ export const usePDFHighLight = (keywords: string[], pageNumber: number, onHighLi
                 if (str.length == 0) {
                     return str;
                 }
-                debugger
 
                 currentIndex.current += str.length;
                 if (!inRange(currentIndex.current - str.length, contextInfo.current.ranges)) {
@@ -86,7 +84,7 @@ export const usePDFHighLight = (keywords: string[], pageNumber: number, onHighLi
             console.log(_1ST_RENDER);
             try {
                 const nextCurrentInfo = {
-                    content: "",
+                    content: contextInfo.current.content,
                     ranges: [] as number[][]
                 };
                 keywords.forEach(item => {
