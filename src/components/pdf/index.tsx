@@ -32,7 +32,7 @@ const options = {
 };
 
 
-export default function Sample() {
+export default function PDFViewer() {
     const [currentPageIndex, setCurrentPageIndex] = useState(0);
     const [totalPages, setTotalPages] = useState(0);
 

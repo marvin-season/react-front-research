@@ -1,12 +1,15 @@
-// import Sample from "./components/pdf";
+// import PDFViewer from "./components/pdf";
 
 import {ExcelPreview} from "./components/excel/ExcelPreview.tsx";
-import Sample from "./components/pdf";
+import PDFViewer from "./components/pdf";
+import {RouterProvider} from "react-router-dom";
+import router from "./router";
 
 function App() {
 
     return (
-        <Sample/>
+        <RouterProvider router={router} />
+        // <PDFViewer/>
     )
 }
 

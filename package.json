@@ -12,11 +12,13 @@
   "dependencies": {
     "@cyntler/react-doc-viewer": "^1.14.1",
     "@uiw/react-markdown-preview": "^5.0.3",
+    "antd": "^5.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-excel-renderer": "^1.1.0",
-    "xlsx": "^0.18.5",
-    "react-pdf": "7.6.0"
+    "react-pdf": "7.6.0",
+    "react-router-dom": "^6.21.1",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/pdf-parse": "^1.1.4",
