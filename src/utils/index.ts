@@ -5,9 +5,6 @@ export const getFileSuffix = (fileName: string) => {
 
 export const handleScroll = (selector: string) => document.querySelector(selector)?.scrollIntoView({behavior: "smooth"});
 export const matchAndGetPosition = (content: string, targetStr: string) => {
-    console.log(targetStr)
-    console.log(content)
-
     const result = {
         startIndex: -1,
         length: -1,
@@ -18,6 +15,7 @@ export const matchAndGetPosition = (content: string, targetStr: string) => {
 
     if (startIndex == -1) {
         let {startIndex, length, substring} = findCommonStrByLonger(content, targetStr);
+        // debugger
         if (startIndex != -1 && content.endsWith(substring)) {
             result.startIndex = startIndex
             result.length = length
@@ -36,8 +34,11 @@ export const matchAndGetPosition = (content: string, targetStr: string) => {
 /**
  * 剔除字符串中的字符
  */
-export const excludeChar = (content: string) => {
-    return content.replace(/\n+/g, "");
+export const excludeChar = (content: string, regx?: RegExp) => {
+    if(regx){
+        return content.replace(regx, "")
+    }
+    return content.replace(/[\s\n]+/g, "");
 };
 
 export const adjustStrByLength = (str1: string, str2: string) => {

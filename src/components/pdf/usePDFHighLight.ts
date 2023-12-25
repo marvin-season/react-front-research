@@ -13,6 +13,7 @@ let initCurrentIndex = 0;
  * 第一次扫描得到PDF上下文
  */
 const initContextInfo = {
+    remainingContent: '',
     content: "",
     ranges: [] as number[][]
 };
@@ -38,7 +39,7 @@ export const usePDFHighLight = (keywords: string[], pageNumber: number, onHighLi
     }, [keywords]);
 
     const handleCustomTextRenderer = ({str: strItem}: { str: string }) => {
-        let str = excludeChar(strItem);
+        let str = excludeChar(strItem, /[\s\n]+/g);
         // 1st render
         if (pageKey == _1ST_RENDER) {
             contextInfo.current.content += str;
@@ -50,20 +51,24 @@ export const usePDFHighLight = (keywords: string[], pageNumber: number, onHighLi
                     return str;
                 }
 
+                const lastCurrenIndex = currentIndex.current
+
                 currentIndex.current += str.length;
-                if (!inRange(currentIndex.current - str.length, contextInfo.current.ranges)) {
+                if (!inRange(lastCurrenIndex, contextInfo.current.ranges)) {
                     // 没达到高亮区域
                     return str;
                 }
 
-
                 for (const range of contextInfo.current.ranges) {
                     // 进入高亮范围，拿到高亮段落和高亮区域的重叠位置
                     const [start, length] =
-                        getIntersectionByIndex(range[0], range[0] + range[1], currentIndex.current - str.length, currentIndex.current);
+                        getIntersectionByIndex(range[0], range[0] + range[1], lastCurrenIndex, currentIndex.current);
                     const hlValue = str.substring(start, start + length);
                     if (hlValue) {
-                        return `${str.substring(0, start)}<mark class="mark-highlight-pdf" id="mark-highlight-pdf${pageNumber}">${hlValue}</>${str.substring(start + length)}`;
+                        const prefixStr = str.substring(0, start)
+                        const suffixStr = str.substring(start + length)
+                        console.log(prefixStr, hlValue, suffixStr, start, length)
+                        return `${prefixStr}<mark id="mark-highlight-pdf${pageNumber}">${hlValue}</mark>${suffixStr}`;
                     }
                 }
 
@@ -84,13 +89,17 @@ export const usePDFHighLight = (keywords: string[], pageNumber: number, onHighLi
             console.log(_1ST_RENDER);
             try {
                 const nextCurrentInfo = {
+                    remainingContent: '',
                     content: contextInfo.current.content,
                     ranges: [] as number[][]
                 };
                 keywords.forEach(item => {
                     const keyword = excludeChar(item);
-                    const {startIndex, length} = matchAndGetPosition(contextInfo.current.content, keyword);
+                    const {startIndex, length, remainingContent, consumedContent} = matchAndGetPosition(contextInfo.current.content, keyword);
+
+                    console.log(remainingContent, consumedContent, startIndex, length)
                     nextCurrentInfo.content = "";
+                    nextCurrentInfo.remainingContent = "";
                     nextCurrentInfo.ranges.push([startIndex, length]);
                 });
                 contextInfo.current = nextCurrentInfo;

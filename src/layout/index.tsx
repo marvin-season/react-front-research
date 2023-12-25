@@ -7,6 +7,8 @@ const LayoutContainer = styled.div`
   justify-content: flex-start;
   height: 100vh;
   overflow: auto;
+  box-sizing: border-box;
+  gap: 10px;
 `
 
 const NavItem = styled.div<{ activated: boolean }>`
@@ -20,7 +22,8 @@ const NavItem = styled.div<{ activated: boolean }>`
 `
 
 const Nav = styled.div`
-  padding: 10px
+  padding: 10px;
+  border-right: 1px solid #aaa;
 `
 
 const Layout = () => {
