@@ -24,7 +24,7 @@ const items = [
     {
         id: 1,
         pageNumber: 1,
-        keyword: "nascetur ridiculus mus. Pellentesque eget semper ligula, et luctus odio. Nam ac metus nec ex euismod varius acaligula.Curabiturvelscelerisqueodi",
+        keyword: "nascetur ridiculus mus. Pellentesque eget semper ligula, et luctus odio. Nam ac metus nec ex euismod varius",
     },
     {
         id: 2,

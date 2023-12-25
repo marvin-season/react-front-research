@@ -35,7 +35,7 @@ export const matchAndGetPosition = (content: string, targetStr: string) => {
  * 剔除字符串中的字符
  */
 export const excludeChar = (content: string, regx?: RegExp) => {
-    if(regx){
+    if (regx) {
         return content.replace(regx, "")
     }
     return content.replace(/[\s\n]+/g, "");
@@ -88,7 +88,7 @@ export const findCommonStrByFirstStr = (str1: string, str2: string) => {
 }
 
 /**
- * (1, 4, 2, 5]) => [2,4]
+ * (1, 4, 2, 5) => [2,2]
  */
 export const getIntersectionByIndex = (startIndex: number, endIndex: number, targetStartIndex: number, targetEndIndex: number) => {
     if (startIndex > endIndex || targetStartIndex > targetEndIndex) {

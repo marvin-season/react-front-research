@@ -1,9 +1,11 @@
 import {useEffect, useRef, useState} from "react";
-import {excludeChar, getIntersectionByIndex, inRange, matchAndGetPosition} from "../../utils";
+import {excludeChar, getIntersectionByIndex, matchAndGetPosition} from "../../utils";
 import {onHighLighted} from '../../types'
 
 const _1ST_RENDER = "1st_render";
 const _MORE_RENDER = "more_render";
+
+type MatchRangeType = [number, number]
 
 /**
  * 第二次扫描index记录
@@ -15,7 +17,7 @@ let initCurrentIndex = 0;
 const initContextInfo = {
     remainingContent: '',
     content: "",
-    ranges: [] as number[][]
+    ranges: [] as MatchRangeType[]
 };
 
 
@@ -39,7 +41,7 @@ export const usePDFHighLight = (keywords: string[], pageNumber: number, onHighLi
     }, [keywords]);
 
     const handleCustomTextRenderer = ({str: strItem}: { str: string }) => {
-        let str = excludeChar(strItem, /[\s\n]+/g);
+        let str = excludeChar(strItem);
         // 1st render
         if (pageKey == _1ST_RENDER) {
             contextInfo.current.content += str;
@@ -51,23 +53,25 @@ export const usePDFHighLight = (keywords: string[], pageNumber: number, onHighLi
                     return str;
                 }
 
-                const lastCurrenIndex = currentIndex.current
+                const lastIndex = currentIndex.current
 
                 currentIndex.current += str.length;
-                if (!inRange(lastCurrenIndex, contextInfo.current.ranges)) {
-                    // 没达到高亮区域
-                    return str;
-                }
+                // if (!inRange(lastIndex, contextInfo.current.ranges)) {
+                //     // 没达到高亮区域
+                //     return str;
+                // }
+                if (currentIndex.current == 1406) debugger
+
+                console.log(str, currentIndex)
 
                 for (const range of contextInfo.current.ranges) {
                     // 进入高亮范围，拿到高亮段落和高亮区域的重叠位置
                     const [start, length] =
-                        getIntersectionByIndex(range[0], range[0] + range[1], lastCurrenIndex, currentIndex.current);
+                        getIntersectionByIndex(range[0], range[0] + range[1], lastIndex, currentIndex.current);
                     const hlValue = str.substring(start, start + length);
                     if (hlValue) {
                         const prefixStr = str.substring(0, start)
                         const suffixStr = str.substring(start + length)
-                        console.log(prefixStr, hlValue, suffixStr, start, length)
                         return `${prefixStr}<mark id="mark-highlight-pdf${pageNumber}">${hlValue}</mark>${suffixStr}`;
                     }
                 }
@@ -91,13 +95,19 @@ export const usePDFHighLight = (keywords: string[], pageNumber: number, onHighLi
                 const nextCurrentInfo = {
                     remainingContent: '',
                     content: contextInfo.current.content,
-                    ranges: [] as number[][]
+                    ranges: [] as MatchRangeType[]
                 };
                 keywords.forEach(item => {
                     const keyword = excludeChar(item);
-                    const {startIndex, length, remainingContent, consumedContent} = matchAndGetPosition(contextInfo.current.content, keyword);
+                    debugger
+                    const {
+                        startIndex,
+                        length,
+                        remainingContent,
+                        consumedContent
+                    } = matchAndGetPosition(contextInfo.current.content, keyword);
 
-                    console.log(remainingContent, consumedContent, startIndex, length)
+                    // console.log(remainingContent, consumedContent, startIndex, length)
                     nextCurrentInfo.content = "";
                     nextCurrentInfo.remainingContent = "";
                     nextCurrentInfo.ranges.push([startIndex, length]);

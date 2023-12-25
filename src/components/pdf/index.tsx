@@ -29,6 +29,7 @@ export default function PDFViewer({keyword, pageNumber: currentPageNumber}: {
                 }}>
                     {
                         Array(totalPages).fill(-1).map((item, index) => {
+                            if(index > 0) return <></>
 
                             return <div key={index}>
                                 <PDFPage
