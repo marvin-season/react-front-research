@@ -24,8 +24,8 @@ const items = [
     {
         id: 1,
         pageNumber: 1,
-        keyword: "Etiam fringilla hendrerit purus sed vestibulum. Morbi congue diam vitae justo pellentesque mollis.\n" +
-            "Aenean non sem tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur\n" +
+        keyword:
+            "arturient montes, nascetur\n" +
             "ridiculus mus. Pellentesque eget semper ligula, et luctus odio. Nam ac metus nec ex euismod varius",
     },
     {
