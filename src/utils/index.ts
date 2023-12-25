@@ -87,18 +87,14 @@ export const findCommonStrByFirstStr = (str1: string, str2: string) => {
     }
 }
 
-/**
- * (1, 4, 2, 5) => [2,2]
- */
 export const getIntersectionByIndex = (startIndex: number, endIndex: number, targetStartIndex: number, targetEndIndex: number) => {
-    if (startIndex > endIndex || targetStartIndex > targetEndIndex) {
-        console.log("下标错误");
-        return [-1, -1];
+    let minStartIndex = Math.max(startIndex, targetStartIndex);
+    let minEndIndex = Math.min(endIndex, targetEndIndex);
+    if (minStartIndex > minEndIndex) {
+        return [-1, 0]
     }
 
-    const startOffset = startIndex < targetStartIndex ? 0 : startIndex - targetStartIndex;
-    const length = targetEndIndex < endIndex ? targetEndIndex - targetStartIndex - startOffset : endIndex - targetStartIndex;
-    return [startOffset, length];
+    return [startIndex - Math.min(startIndex, targetStartIndex), minEndIndex - minStartIndex + 1]
 };
 
 export const inRange = (index: number, ranges: number[][]) => {

@@ -60,9 +60,6 @@ export const usePDFHighLight = (keywords: string[], pageNumber: number, onHighLi
                 //     // 没达到高亮区域
                 //     return str;
                 // }
-                if (currentIndex.current == 1406) debugger
-
-                console.log(str, currentIndex)
 
                 for (const range of contextInfo.current.ranges) {
                     // 进入高亮范围，拿到高亮段落和高亮区域的重叠位置
@@ -99,7 +96,6 @@ export const usePDFHighLight = (keywords: string[], pageNumber: number, onHighLi
                 };
                 keywords.forEach(item => {
                     const keyword = excludeChar(item);
-                    debugger
                     const {
                         startIndex,
                         length,
