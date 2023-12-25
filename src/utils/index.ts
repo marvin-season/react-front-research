@@ -38,7 +38,7 @@ export const excludeChar = (content: string, regx?: RegExp) => {
     if (regx) {
         return content.replace(regx, "")
     }
-    return content.replace(/[\s\n]+/g, "");
+    return content.replace(/[\n]+/g, "");
 };
 
 export const adjustStrByLength = (str1: string, str2: string) => {

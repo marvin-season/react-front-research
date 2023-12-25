@@ -1,5 +1,5 @@
 import {useEffect, useRef, useState} from "react";
-import {excludeChar, getIntersectionByIndex, matchAndGetPosition} from "../../utils";
+import {excludeChar, getIntersectionByIndex, inRange, matchAndGetPosition} from "../../utils";
 import {onHighLighted} from '../../types'
 
 const _1ST_RENDER = "1st_render";
@@ -56,10 +56,11 @@ export const usePDFHighLight = (keywords: string[], pageNumber: number, onHighLi
                 const lastIndex = currentIndex.current
 
                 currentIndex.current += str.length;
-                // if (!inRange(lastIndex, contextInfo.current.ranges)) {
-                //     // 没达到高亮区域
-                //     return str;
-                // }
+
+                if (!inRange(currentIndex.current , contextInfo.current.ranges)) {
+                    // 没达到高亮区域
+                    return str;
+                }
 
                 for (const range of contextInfo.current.ranges) {
                     // 进入高亮范围，拿到高亮段落和高亮区域的重叠位置
