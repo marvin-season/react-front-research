@@ -86,7 +86,9 @@ export const findCommonStrByFirstStr = (str1: string, str2: string) => {
         };
     }
 }
-
+/**
+ * 1，5，2，6 =>【1, 4】
+ */
 export const getIntersectionByIndex = (startIndex: number, endIndex: number, targetStartIndex: number, targetEndIndex: number) => {
     let minStartIndex = Math.max(startIndex, targetStartIndex);
     let minEndIndex = Math.min(endIndex, targetEndIndex);
