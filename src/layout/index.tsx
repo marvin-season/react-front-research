@@ -39,6 +39,13 @@ const Layout = () => {
         },
         {
             index: 1,
+            label: 'immer',
+            onClick: () => {
+                navigate('/immer');
+            }
+        },
+        {
+            index: 2,
             label: '文件预览',
             onClick: () => {
                 navigate('/file-preview');
