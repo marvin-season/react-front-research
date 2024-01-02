@@ -5,17 +5,24 @@ import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 import {searchPlugin} from '@react-pdf-viewer/search';
 import {useEffect, useState} from 'react';
 
-const str = '第三是品牌。品牌是一个非常综合的因素，有历史也有未来，因为它是对过去行为的评\n' +
-    '估，也是对未来行为的预估，是一种无形资产，价值也是在不断变化的。为什么我们在合肥'
-const exclude = (str: string) => str.replace(/\n+/g, '');
+const str = '同VMware合作\n' +
+    '在公有云私有化方面取得了技术上的重大突破，这是未来多云混合平台的方向，非常难能可\n' +
+    '贵。'
+
+const exclude = (str: string) => str.replace(/[\s\n]+/g, '');
+
+const convert = (str: string) => {
+    let split = str.split(/[\s\n]+/g).filter(item => item.length > 5);
+    console.log(split)
+    return split
+
+}
 export const PDFViewer2 = ({workerUrl, fileUrl, onDocumentLoad}: any) => {
 
     const [isDocumentLoaded, setDocumentLoaded] = useState(false);
-    const [value, setValue] = useState(exclude(str))
+    const [value, setValue] = useState<string>()
 
-    const searchPluginInstance = searchPlugin({
-        // keyword: value,
-    })
+    const searchPluginInstance = searchPlugin({})
     const {highlight} = searchPluginInstance;
 
     const handleDocumentLoad = () => {
@@ -25,7 +32,7 @@ export const PDFViewer2 = ({workerUrl, fileUrl, onDocumentLoad}: any) => {
 
     useEffect(() => {
         if (value && isDocumentLoaded) {
-            highlight(exclude(value));
+            highlight(convert(value));
         }
     }, [isDocumentLoaded, value]);
 
@@ -34,18 +41,6 @@ export const PDFViewer2 = ({workerUrl, fileUrl, onDocumentLoad}: any) => {
         <input type="text" value={value} onChange={(e) => {
             setValue(e.target.value)
         }}/>
-        <button onClick={() => {
-            if (value.length == 0) {
-                return
-            }
-            if (!isDocumentLoaded) {
-                return
-            }
-            console.log(value)
-            highlight(exclude(value));
-        }
-        }>highlight
-        </button>
         <div style={{width: '900px', height: '800px', overflow: 'scroll'}}>
             <Viewer onDocumentLoad={handleDocumentLoad} key={0} fileUrl={fileUrl} plugins={[searchPluginInstance]}/>
         </div>
