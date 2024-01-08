@@ -51,6 +51,13 @@ const Layout = () => {
                 navigate('/file-preview');
             }
         },
+        {
+            index: 3,
+            label: 'PDF搜索',
+            onClick: () => {
+                navigate('/pdf-search');
+            }
+        },
     ]
     return <>
         <LayoutContainer>
