@@ -45,13 +45,6 @@ const Layout = () => {
             }
         },
         {
-            index: 2,
-            label: '文件预览',
-            onClick: () => {
-                navigate('/file-preview');
-            }
-        },
-        {
             index: 3,
             label: 'PDF搜索',
             onClick: () => {

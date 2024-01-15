@@ -1,63 +1,23 @@
-import React, {useEffect, useRef} from "react";
-import * as pdfjsLib from 'pdfjs-dist';
-// PDF 文件路径
-const pdfPath = 'demo.pdf';
-const workerUrl = "https://unpkg.com/pdfjs-dist@2.16.105/build/pdf.worker.js";
-pdfjsLib.GlobalWorkerOptions.workerSrc = workerUrl
-// new URL("pdf.worker.js", import.meta.url).toString();
-// 获取 Canvas 元素
+import React, {useState} from "react";
+import PdfViewer from "./PdfViewer.tsx";
 
-// 执行搜索
+const keywords = {
+    demo1: "1.保函管理\n合同生效后，供应商在ECP做保函登记，提交后保函信息同步至ERP系统。保函管理\n包括保函审核和保函交接。合同结算人员在收到供应商提交的纸质保函后，对纸质保函与系\n统中的保函信息进行核对。保函确认后打印交接单给供应商。\n通过以下方式进入保函管理的屏幕：\n菜单路径：sap菜单->用户快捷菜单->物资管理->湖北物资集约化->合同履约->合同结算\n执行事务码ZMM00125，进入保函管理的屏幕\n必须填写：\n采购组织采购订单对应的采购组织，例：1500\n工厂代码采购订单对应的工厂，例：A000\n输入屏幕选择条件，点击“时钟样图标”执行后，进入下一屏幕。系统显示相应的保函信息：\n勾选需要审核的保函，如果符合要求，点击审核通过，保函状态变成已审核并自动同步到电\n子商务平台(以下简称ECP系统)；如果不符合要求，点击退回，保函状态变成已退回并自动\n同步到ECP系统。\n点击“打印交接单”，可打印保函信息。\n",
+    demo2: "一、操作步骤1\n1保函管理1\n2保函查询1\n3付款申请管理2\n4付款申请查询4\n5发票管理4\n6发票查询5\n",
+    demo3: "5.发票管理\n通过以下方式进入发票管理的屏幕：\n菜单路径 sap菜单->用户快捷菜单->物资管理->湖北物资集约化->合同履约->合同结算\n执行事物代码ZMM00127,进入发票管理的屏幕：\n按照需求填写：\n采购订单编号采购订单编号，例：4100098032\n采购组织 采购订单对应的采购组织，例：1500\n工厂代码 采购订单对应的工厂，例：A000\n发票状态 此处选择“需上传”\n输入屏幕选择条件，点击”时钟样图标“执行后，进入下一屏幕。\n选中要编辑的行项目，点击“维护可申请金额”，对其维护可申请发票金额（点击删除按钮\n可对仅保存的发票可申请金额进行删除操作）：\n勾选“选择”，维护“发票不含税金额”、“发票含税金额”、“税额”、“数量”，点击保存、上\n传，将发票可申请信息同步至ECP系统。\n发票状态变成已上传。\n当ECP系统收到ERP系统维护的发票可申请金额后，供应商维护实际的发票信息，并将发\n票信息回传到ERP系统，合同结算人员对发票信息进行审核操作。5按照需求填写：\n采购订单编号采购订单编号，例：4100098032\n采购组织 采购订单对应的采购组织，例：1500\n工厂代码 采购订单对应的工厂，例：A000\n发票状态 此处选择“需确认”\n输入屏幕选择条件，点击“时钟样图标”执行后，进入下一屏幕。\n选中需确认的行项目，点击明细，系统显示相应的屏幕：\n如果发票信息正确，点击审核，状态自动同步到ECP系统，如果发票信息不正确，点击退回，\n直接退回到初始状态，可重新提交发票可申请金额，点击打印，可打印发票申请信息。\n",
+    demo4: "ECP系统。44.付款申请查询通过以下方式进入付款申请查询的屏幕：菜单路径sap菜单->用户快捷菜单->物资管理->湖北物资集约化->合同履约->合同结算执行事物代码ZMM00131,进入查询屏幕：按照需求填写：采购订单编号采购订单编号，例：4100098032采购组织采购订单对应的采购组织，例：1500工厂代码采购订单对应的工厂，例：A000付款性质1为预付款、2为到货款、3为投运款、4为质保款最大命中数量查询结果的最大显示数量，默认为200输入屏幕选择条件，点击“时钟样图标”执行后，进入下一屏幕。显示付款申请状态及相关信息。5.发票管理\n通过以下方式进入发票管理的屏幕：\n菜单路径 sap菜单->用户快捷菜单->物资管理->湖北物资集约化->合同履约->合同结算\n执行事物代码ZMM00127,进入发票管理的屏幕：\n按照需求填写：\n采购订单编号采购订单编号，例：4100098032\n采购组织 采购订单对应的采购组织，例：1500\n工厂代码 采购订单对应的工厂，例：A000\n发票状态 此处选择“需上传”\n输入屏幕选择条件，点击”时钟样图标“执行后，进入下一屏幕。\n选中要编辑的行项目，点击“维护可申请金额”，对其维护可申请发票金额（点击删除按钮\n可对仅保存的发票可申请金额进行删除操作）：\n勾选“选择”，维护“发票不含税金额”、“发票含税金额”、“税额”、“数量”，点击保存、上\n传，将发票可申请信息同步至ECP系统。\n发票状态变成已上传。\n当ECP系统收到ERP系统维护的发票可申请金额后，供应商维护实际的发票信息，并将发\n票信息回传到ERP系统，合同结算人员对发票信息进行审核操作。5按照需求填写：\n采购订单编号采购订单编号，例：4100098032 ",
+    demo5: "合同结算人员对发票信息进行审核操作。5按照需求填写：\n采购订单编号采购订单编号，例：4100098032 "
+}
 
-// 调用搜索函数，传入要搜索的内容
-const searchTerm = '合同生效'; // 替换为你要搜索的内容
+function Index() {
+    const [value, setValue] = useState(keywords.demo4)
+    return <div>
+        <input onChange={(e) => setValue(e.target.value)} value={value}/>
+        <div style={{height: '500px', overflow: "auto",}}>
 
-const Index: React.FC<{}> = props => {
-    const canvasRef = useRef<HTMLCanvasElement>(null);
-    const canvasContainerRef = useRef<HTMLDivElement>(null)
-
-    function searchInPDF(searchTerm: string, canvas: HTMLCanvasElement, context: CanvasRenderingContext2D) {
-
-        pdfjsLib.getDocument({
-            url: pdfPath,
-        }).promise.then(pdfDoc => {
-
-            pdfDoc.getPage(1).then(page => {
-                const viewport = page.getViewport({scale: 1});
-                canvas.width = viewport.width
-                canvas.height = viewport.height
-
-                page.getTextContent().then(content => {
-                    const renderContext = {
-                        canvasContext: context,
-                        viewport: viewport
-                    };
-                    context.clearRect(0, 0, canvas.width, canvas.height)
-                    page.render(renderContext);
-                });
-
-            })
-
-        });
-    }
-
-    useEffect(() => {
-        if (canvasRef.current) {
-            const context = canvasRef.current.getContext('2d');
-            const canvas = canvasRef.current
-
-            if (context) {
-                searchInPDF(searchTerm, canvas, context);
-
-            }
-        }
-    }, []);
-    return (
-        <div style={{position: 'relative'}} ref={canvasContainerRef}>
-            <canvas ref={canvasRef}>
-            </canvas>
+            <PdfViewer pdfUrl={'/demo.pdf'} searchText={value}/>;
         </div>
-    );
-};
+    </div>
+}
 
-export default Index
+export default Index;

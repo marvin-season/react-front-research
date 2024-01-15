@@ -15,7 +15,7 @@
     "@react-pdf-viewer/default-layout": "^3.12.0",
     "@react-pdf-viewer/highlight": "^3.12.0",
     "@react-pdf-viewer/search": "^3.12.0",
-    "pdfjs-dist": "^2.16.105",
+    "pdfjs-dist": "4.0.379",
     "@uiw/react-markdown-preview": "^5.0.3",
     "antd": "^5.12.5",
     "immer": "^10.0.3",

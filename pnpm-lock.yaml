@@ -10,16 +10,16 @@ dependencies:
     version: registry.npmmirror.com/@cyntler/react-doc-viewer@1.14.1(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
   '@react-pdf-viewer/core':
     specifier: ^3.12.0
-    version: registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+    version: registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
   '@react-pdf-viewer/default-layout':
     specifier: ^3.12.0
-    version: registry.npmmirror.com/@react-pdf-viewer/default-layout@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+    version: registry.npmmirror.com/@react-pdf-viewer/default-layout@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
   '@react-pdf-viewer/highlight':
     specifier: ^3.12.0
-    version: registry.npmmirror.com/@react-pdf-viewer/highlight@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+    version: registry.npmmirror.com/@react-pdf-viewer/highlight@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
   '@react-pdf-viewer/search':
     specifier: ^3.12.0
-    version: registry.npmmirror.com/@react-pdf-viewer/search@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+    version: registry.npmmirror.com/@react-pdf-viewer/search@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
   '@uiw/react-markdown-preview':
     specifier: ^5.0.3
     version: registry.npmmirror.com/@uiw/react-markdown-preview@5.0.3(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
@@ -30,8 +30,8 @@ dependencies:
     specifier: ^10.0.3
     version: registry.npmmirror.com/immer@10.0.3
   pdfjs-dist:
-    specifier: ^2.16.105
-    version: registry.npmmirror.com/pdfjs-dist@2.16.105
+    specifier: 4.0.379
+    version: registry.npmmirror.com/pdfjs-dist@4.0.379
   react:
     specifier: ^18.2.0
     version: registry.npmmirror.com/react@18.2.0
@@ -1033,7 +1033,7 @@ packages:
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/attachment@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/attachment@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-mhwrYJSIpCvHdERpLUotqhMgSjhtF+BTY1Yb9Fnzpcq3gLZP+Twp5Rynq21tCrVdDizPaVY7SKu400GkgdMfZw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/attachment/-/attachment-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/attachment/3.12.0
     name: '@react-pdf-viewer/attachment'
@@ -1042,14 +1042,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/bookmark@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/bookmark@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-i7nEit8vIFMAES8RFGwprZ9cXOOZb9ZStPW6E6yuObJEXcvBj/ctsbBJGZxqUZOGklM0JoB7sjHyxAriHfe92A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/bookmark/-/bookmark-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/bookmark/3.12.0
     name: '@react-pdf-viewer/bookmark'
@@ -1058,14 +1058,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-8MsdlQJ4jaw3GT+zpCHS33nwnvzpY0ED6DEahZg9WngG++A5RMhk8LSlxdHelwaFFHFiXBjmOaj2Kpxh50VQRg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/core/-/core-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/core/3.12.0
     name: '@react-pdf-viewer/core'
@@ -1075,12 +1075,12 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      pdfjs-dist: registry.npmmirror.com/pdfjs-dist@2.16.105
+      pdfjs-dist: registry.npmmirror.com/pdfjs-dist@4.0.379
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/default-layout@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/default-layout@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-K2fS4+TJynHxxCBFuIDiFuAw3nqOh4bkBgtVZ/2pGvnFn9lLg46YGLMnTXCQqtyZzzXYh696jmlFViun3is4pA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/default-layout/-/default-layout-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/default-layout/3.12.0
     name: '@react-pdf-viewer/default-layout'
@@ -1089,18 +1089,18 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/attachment': registry.npmmirror.com/@react-pdf-viewer/attachment@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/bookmark': registry.npmmirror.com/@react-pdf-viewer/bookmark@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/thumbnail': registry.npmmirror.com/@react-pdf-viewer/thumbnail@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/toolbar': registry.npmmirror.com/@react-pdf-viewer/toolbar@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/attachment': registry.npmmirror.com/@react-pdf-viewer/attachment@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/bookmark': registry.npmmirror.com/@react-pdf-viewer/bookmark@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/thumbnail': registry.npmmirror.com/@react-pdf-viewer/thumbnail@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/toolbar': registry.npmmirror.com/@react-pdf-viewer/toolbar@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/full-screen@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/full-screen@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-hQouJ26QUaRBCXNMU1aI1zpJn4l4PJRvlHhuE2dZYtLl37ycjl7vBCQYZW1FwnuxMWztZsY47R43DKaZORg0pg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/full-screen/-/full-screen-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/full-screen/3.12.0
     name: '@react-pdf-viewer/full-screen'
@@ -1109,14 +1109,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/get-file@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/get-file@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-Uhq45n2RWlZ7Ec/BtBJ0WQESRciaYIltveDXHNdWvXgFdOS8XsvB+mnTh/wzm7Cfl9hpPyzfeezifdU9AkQgQg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/get-file/-/get-file-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/get-file/3.12.0
     name: '@react-pdf-viewer/get-file'
@@ -1125,14 +1125,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/highlight@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/highlight@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-UxdnvnvTjikugOUEj/RIeJm3Lm93aVu+Xr0jMa7d+wrZlHh5b7wTd+FeI6gNk9wdJDrB70oHiCzn6MTbepkc5g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/highlight/-/highlight-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/highlight/3.12.0
     name: '@react-pdf-viewer/highlight'
@@ -1141,14 +1141,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/open@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/open@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-vhiDEYsiQLxvZkIKT9VPYHZ1BOnv46x9eCEmRWxO1DJ8fa/GRDTA9ivXmq/ap0dGEJs6t+epleCkCEfllLR/Yw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/open/-/open-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/open/3.12.0
     name: '@react-pdf-viewer/open'
@@ -1157,14 +1157,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/page-navigation@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/page-navigation@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-tVEJ48Dd5kajV1nKkrPWijglJRNBiKBTyYDKVexhiRdTHUP1f6QQXiSyDgCUb0IGSZeJzOJb1h7ApKHe8OTtuw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/page-navigation/-/page-navigation-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/page-navigation/3.12.0
     name: '@react-pdf-viewer/page-navigation'
@@ -1173,14 +1173,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/print@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/print@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-xJn76CgbU/M2iNaN7wLHTg+sdOekkRMfCakFLwPrE+SR7qD6NUF4vQQKJBSVCCK5bUijzb6cWfKGfo8VA72o4Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/print/-/print-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/print/3.12.0
     name: '@react-pdf-viewer/print'
@@ -1189,14 +1189,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/properties@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/properties@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-dYTCHtVwFNkpDo7QxL2qk/8zAKndLwdD1FFxBftl6jIlQbtvNdxkFfkv1HcQING9Ic+7DBryOiD7W0ze4IERYg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/properties/-/properties-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/properties/3.12.0
     name: '@react-pdf-viewer/properties'
@@ -1205,14 +1205,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/rotate@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/rotate@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-yaxaMYPChvNOjR8+AxRmj0kvojyJKPq4XHEcIB2lJJgBY1Zra3mliDUP3Nlb4yV8BS9+yBqWn9U9mtnopQD+tw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/rotate/-/rotate-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/rotate/3.12.0
     name: '@react-pdf-viewer/rotate'
@@ -1221,14 +1221,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/scroll-mode@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/scroll-mode@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-okII7Xqhl6cMvl1izdEvlXNJ+vJVq/qdg53hJIDYVgBCWskLk/cpjUg/ZonBxseG9lIDP3w2VO1McT8Gn11OAg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/scroll-mode/-/scroll-mode-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/scroll-mode/3.12.0
     name: '@react-pdf-viewer/scroll-mode'
@@ -1237,14 +1237,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/search@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/search@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-jAkLpis49fsDDY/HrbUZIOIhzF5vynONQNA4INQKI38r/MjveblrkNv7qbr9j5lQ/WFic5+gD1e+Mtpf1/7DiA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/search/-/search-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/search/3.12.0
     name: '@react-pdf-viewer/search'
@@ -1253,14 +1253,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/selection-mode@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/selection-mode@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-yysWEu2aCtBvzSgbhgI9kT5cq2hf0FU6Z+3B7MMXz14Kxyc3y18wUqxtgbvpFEfWF0bNUUq16JtWRljtxvZ83w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/selection-mode/-/selection-mode-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/selection-mode/3.12.0
     name: '@react-pdf-viewer/selection-mode'
@@ -1269,14 +1269,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/theme@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/theme@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-cdBi+wR1VOZ6URCcO9plmAZQu4ZGFcd7HJdBe7VIFiGyrvl9I/Of74ONLycnDImSuONt8D3uNjPBLieeaShVeg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/theme/-/theme-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/theme/3.12.0
     name: '@react-pdf-viewer/theme'
@@ -1285,14 +1285,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/thumbnail@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/thumbnail@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-Vc8j3bO6wumWZV4o6pAbktPWKDSC9tQAzOCJ3cof541u4i44C11ccYC4W9aNcsMMUSO3bNwAGWtP8OFthV5akQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/thumbnail/-/thumbnail-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/thumbnail/3.12.0
     name: '@react-pdf-viewer/thumbnail'
@@ -1301,14 +1301,14 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/toolbar@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/toolbar@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-qACTU3qXHgtNK8J+T13EWio+0liilj86SJ87BdapqXynhl720OKPlSKOQqskUGqg3oTUJAhrse9XG6SFdHJx+g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/toolbar/-/toolbar-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/toolbar/3.12.0
     name: '@react-pdf-viewer/toolbar'
@@ -1317,26 +1317,26 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/full-screen': registry.npmmirror.com/@react-pdf-viewer/full-screen@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/get-file': registry.npmmirror.com/@react-pdf-viewer/get-file@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/open': registry.npmmirror.com/@react-pdf-viewer/open@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/page-navigation': registry.npmmirror.com/@react-pdf-viewer/page-navigation@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/print': registry.npmmirror.com/@react-pdf-viewer/print@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/properties': registry.npmmirror.com/@react-pdf-viewer/properties@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/rotate': registry.npmmirror.com/@react-pdf-viewer/rotate@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/scroll-mode': registry.npmmirror.com/@react-pdf-viewer/scroll-mode@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/search': registry.npmmirror.com/@react-pdf-viewer/search@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/selection-mode': registry.npmmirror.com/@react-pdf-viewer/selection-mode@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/theme': registry.npmmirror.com/@react-pdf-viewer/theme@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
-      '@react-pdf-viewer/zoom': registry.npmmirror.com/@react-pdf-viewer/zoom@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/full-screen': registry.npmmirror.com/@react-pdf-viewer/full-screen@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/get-file': registry.npmmirror.com/@react-pdf-viewer/get-file@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/open': registry.npmmirror.com/@react-pdf-viewer/open@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/page-navigation': registry.npmmirror.com/@react-pdf-viewer/page-navigation@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/print': registry.npmmirror.com/@react-pdf-viewer/print@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/properties': registry.npmmirror.com/@react-pdf-viewer/properties@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/rotate': registry.npmmirror.com/@react-pdf-viewer/rotate@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/scroll-mode': registry.npmmirror.com/@react-pdf-viewer/scroll-mode@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/search': registry.npmmirror.com/@react-pdf-viewer/search@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/selection-mode': registry.npmmirror.com/@react-pdf-viewer/selection-mode@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/theme': registry.npmmirror.com/@react-pdf-viewer/theme@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/zoom': registry.npmmirror.com/@react-pdf-viewer/zoom@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
       - pdfjs-dist
     dev: false
 
-  registry.npmmirror.com/@react-pdf-viewer/zoom@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0):
+  registry.npmmirror.com/@react-pdf-viewer/zoom@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-V0GUTyPM77+LzhoKX+T3XI10/HfGdqRTbgeP7ID60FCzcwu6kXWqJn5tzabjDKLTlFv8mJmn0aa/ppkIU97nfA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@react-pdf-viewer/zoom/-/zoom-3.12.0.tgz}
     id: registry.npmmirror.com/@react-pdf-viewer/zoom/3.12.0
     name: '@react-pdf-viewer/zoom'
@@ -1345,7 +1345,7 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
     dependencies:
-      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@2.16.105)(react-dom@18.2.0)(react@18.2.0)
+      '@react-pdf-viewer/core': registry.npmmirror.com/@react-pdf-viewer/core@3.12.0(pdfjs-dist@4.0.379)(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmmirror.com/react@18.2.0
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
     transitivePeerDependencies:
@@ -3358,13 +3358,6 @@ packages:
     name: domain-browser
     version: 1.2.0
     engines: {node: '>=0.4', npm: '>=1.2'}
-    dev: false
-
-  registry.npmmirror.com/dommatrix@1.0.3:
-    resolution: {integrity: sha512-l32Xp/TLgWb8ReqbVJAFIvXmY7go4nTxxlWiAFyhoQw9RKEOHBZNnyGvJWqDVSPmq3Y9HlM4npqF/T6VMOXhww==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/dommatrix/-/dommatrix-1.0.3.tgz}
-    name: dommatrix
-    version: 1.0.3
-    deprecated: dommatrix is no longer maintained. Please use @thednp/dommatrix.
     dev: false
 
   registry.npmmirror.com/duplexify@3.7.1:
@@ -6202,24 +6195,23 @@ packages:
       sha.js: registry.npmmirror.com/sha.js@2.4.11
     dev: false
 
-  registry.npmmirror.com/pdfjs-dist@2.16.105:
-    resolution: {integrity: sha512-J4dn41spsAwUxCpEoVf6GVoz908IAA3mYiLmNxg8J9kfRXc2jxpbUepcP0ocp0alVNLFthTAM8DZ1RaHh8sU0A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pdfjs-dist/-/pdfjs-dist-2.16.105.tgz}
-    name: pdfjs-dist
-    version: 2.16.105
-    peerDependencies:
-      worker-loader: ^3.0.8
-    peerDependenciesMeta:
-      worker-loader:
-        optional: true
-    dependencies:
-      dommatrix: registry.npmmirror.com/dommatrix@1.0.3
-      web-streams-polyfill: registry.npmmirror.com/web-streams-polyfill@3.2.1
-    dev: false
-
   registry.npmmirror.com/pdfjs-dist@3.11.174:
     resolution: {integrity: sha512-TdTZPf1trZ8/UFu5Cx/GXB7GZM30LT+wWUNfsi6Bq8ePLnb+woNKtDymI2mxZYBpMbonNFqKmiz684DIfnd8dA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pdfjs-dist/-/pdfjs-dist-3.11.174.tgz}
     name: pdfjs-dist
     version: 3.11.174
+    engines: {node: '>=18'}
+    optionalDependencies:
+      canvas: registry.npmmirror.com/canvas@2.11.2
+      path2d-polyfill: registry.npmmirror.com/path2d-polyfill@2.0.1
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: false
+
+  registry.npmmirror.com/pdfjs-dist@4.0.379:
+    resolution: {integrity: sha512-6H0Gv1nna+wmrr3CakaKlZ4rbrL8hvGIFAgg4YcoFuGC0HC4B2DVjXEGTFjJEjLlf8nYi3C3/MYRcM5bNx0elA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pdfjs-dist/-/pdfjs-dist-4.0.379.tgz}
+    name: pdfjs-dist
+    version: 4.0.379
     engines: {node: '>=18'}
     optionalDependencies:
       canvas: registry.npmmirror.com/canvas@2.11.2
@@ -8675,13 +8667,6 @@ packages:
     resolution: {integrity: sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/web-namespaces/-/web-namespaces-2.0.1.tgz}
     name: web-namespaces
     version: 2.0.1
-    dev: false
-
-  registry.npmmirror.com/web-streams-polyfill@3.2.1:
-    resolution: {integrity: sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz}
-    name: web-streams-polyfill
-    version: 3.2.1
-    engines: {node: '>= 8'}
     dev: false
 
   registry.npmmirror.com/webidl-conversions@3.0.1:
