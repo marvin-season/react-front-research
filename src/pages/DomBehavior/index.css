@@ -1,0 +1,15 @@
+.element {
+    width: 30px;
+    height: 100px;
+    flex-shrink: 0;
+    background-color: lightskyblue;
+}
+
+.wrapper {
+    border: 1px solid rebeccapurple;
+    overflow-y: auto;
+    display: flex;
+    height: 100px;
+    width: 90px;
+    scroll-behavior: smooth;
+}

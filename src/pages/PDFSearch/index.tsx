@@ -28,15 +28,6 @@ const Index: React.FC<{}> = props => {
                 canvas.height = viewport.height
 
                 page.getTextContent().then(content => {
-                    // content.items.forEach(item => {
-                    //     if (item.str.includes(searchTerm)) {
-                    //
-                    //         context.fillStyle = 'yellow';
-                    //         context.fillRect(0, 0, canvas.width, canvas.height);
-                    //
-                    //     }
-                    // });
-
                     const renderContext = {
                         canvasContext: context,
                         viewport: viewport

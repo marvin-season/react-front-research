@@ -4,6 +4,7 @@ import React, {Suspense} from "react";
 import FilePreview from "../pages/file-preview";
 import Immer from "../pages/immer/immer.tsx";
 import PDFSearch from "../pages/PDFSearch/index.tsx";
+import DomBehavior from "../pages/DomBehavior/index.tsx";
 import Index from "../pages";
 
 export const routes: RouteObject[] = [
@@ -17,6 +18,9 @@ export const routes: RouteObject[] = [
                 element: <Index/>
             },
             {
+                path: 'dom-behavior',
+                element: <DomBehavior/>
+            },{
                 path: 'immer',
                 element: <Immer/>
             }, {

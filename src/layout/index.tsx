@@ -57,6 +57,12 @@ const Layout = () => {
             onClick: () => {
                 navigate('/pdf-search');
             }
+        }, {
+            index: 4,
+            label: 'DomBehavior',
+            onClick: () => {
+                navigate('/dom-behavior');
+            }
         },
     ]
     return <>
